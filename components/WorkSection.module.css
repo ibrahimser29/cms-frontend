@@ -1,0 +1,153 @@
+.section {
+  padding: 5rem 2rem;
+  background: #14090a;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 24px,
+    rgba(255, 255, 255, 0.018) 24px,
+    rgba(255, 255, 255, 0.018) 25px
+  );
+}
+
+.inner {
+  max-width: 1245px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #f3e9da;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0 0 2.5rem;
+}
+
+/* ── Carousel ── */
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  color: #f3e9da;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  opacity: 0.55;
+  transition: opacity 0.15s;
+  padding: 0.5rem;
+  user-select: none;
+}
+
+.arrow:hover { opacity: 1; }
+
+/* ── Image frame ── */
+.frame {
+  flex: 1;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #261712;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Dots ── */
+.dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.45rem;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 2px solid rgba(243, 233, 218, 0.5);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.dotActive {
+  background: #f3e9da;
+  border-color: #f3e9da;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Shrink outer gap so arrows sit tight against the frame */
+  .carousel {
+    gap: 0.5rem;
+  }
+
+  .arrow {
+    font-size: 1.6rem;
+    padding: 0.25rem 0.1rem;
+  }
+
+  .frame {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* On very small screens overlay the arrows on top of the image */
+  .carousel {
+    position: relative;
+    gap: 0;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    font-size: 2rem;
+    background: rgba(14, 7, 8, 0.55);
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+  }
+
+  .arrow:first-child { left: 0.5rem; }
+  .arrow:last-child  { right: 0.5rem; }
+
+  .frame {
+    width: 100%;
+    flex: none;
+    aspect-ratio: 3 / 2;
+    border-radius: 10px;
+  }
+}

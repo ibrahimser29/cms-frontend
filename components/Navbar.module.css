@@ -1,0 +1,222 @@
+.header {
+  --bg: #261712;
+  --bg-edge: #1c0f0b;
+  --cream: #f3e9da;
+  --cream-dim: #cdb9a3;
+  --accent: #c98a4b;
+
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-edge) 100%);
+  color: var(--cream);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid rgba(201, 138, 75, 0.18);
+}
+
+.inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1.5rem;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.logoImg {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Desktop nav */
+.nav {
+  display: none;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: var(--cream-dim);
+  text-decoration: none;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  position: relative;
+  padding: 0.35rem 0;
+  transition: color 0.18s ease;
+}
+
+.navLink:hover {
+  color: var(--cream);
+}
+
+.navLink:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.navLinkActive {
+  color: var(--accent);
+}
+
+.navLinkActive::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+
+/* Hamburger toggle */
+.toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--cream);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.toggleOpen span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.toggleOpen span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggleOpen span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile nav panel */
+.mobileNav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease;
+  border-top: 1px solid rgba(201, 138, 75, 0.18);
+}
+
+.mobileNavOpen {
+  max-height: 320px;
+}
+
+.mobileNavList {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.mobileNavLink {
+  display: block;
+  color: var(--cream-dim);
+  text-decoration: none;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 0.98rem;
+  padding: 0.3rem 0;
+}
+
+.mobileNavLink:hover {
+  color: var(--cream);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle span,
+  .mobileNav {
+    transition: none;
+  }
+}
+
+/* Login / Dashboard action link — desktop pill */
+.navAction {
+  display: inline-block;
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.35rem 1.1rem;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.navAction:hover {
+  opacity: 0.88;
+}
+
+.navActionActive {
+  opacity: 0.75;
+}
+
+/* Login / Dashboard action link — mobile */
+.mobileNavAction {
+  display: block;
+  color: var(--btn-bg);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  padding: 0.3rem 0;
+  text-decoration: none;
+}
+
+.mobileNavAction:hover {
+  opacity: 0.8;
+}
+
+/* Desktop breakpoint */
+@media (min-width: 760px) {
+  .nav {
+    display: block;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+}

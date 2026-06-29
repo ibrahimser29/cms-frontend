@@ -1,0 +1,61 @@
+.footer {
+  background: #0e0708;
+  padding: 2rem 2rem 1.5rem;
+}
+
+.inner {
+  max-width: 1245px;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(243, 233, 218, 0.07);
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logoImg {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #cdb9a3;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.contact:hover {
+  color: #f3e9da;
+}
+
+.icon {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.bottom {
+  padding-top: 0.85rem;
+}
+
+.privacyLink {
+  color: rgba(243, 233, 218, 0.4);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.privacyLink:hover {
+  color: #cdb9a3;
+}

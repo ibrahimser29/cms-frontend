@@ -1,0 +1,293 @@
+.loading {
+  color: #9e8278;
+  padding: 2rem 0;
+}
+
+.page {
+  max-width: 800px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #9e8278;
+  margin-bottom: 1.5rem;
+}
+
+.breadLink {
+  color: #c98a4b;
+  text-decoration: none;
+}
+
+.breadLink:hover {
+  text-decoration: underline;
+}
+
+.sep {
+  color: #cdb9a3;
+}
+
+/* Page heading */
+.heading {
+  font-size: 1.8rem;
+  color: #261712;
+  margin: 0 0 1.5rem;
+}
+
+/* Banners */
+.banner {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.bannerError {
+  background: #fce9e7;
+  color: #8b2f23;
+  border: 1px solid #f5c6c1;
+}
+
+.bannerSuccess {
+  background: #e6f4ea;
+  color: #2a6b3c;
+  border: 1px solid #b8dfc4;
+}
+
+/* Card section */
+.card {
+  background: #fff;
+  border: 1px solid #e8ddd7;
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardHeadingRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.cardHeading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #261712;
+  margin: 0 0 1.25rem;
+}
+
+.cardHeadingRow .cardHeading {
+  margin: 0;
+  flex: 1;
+}
+
+/* Form fields */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #6b5148;
+  letter-spacing: 0.02em;
+}
+
+.input {
+  background: #faf6f0;
+  border: 1px solid #ddd3cc;
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.95rem;
+  color: #261712;
+  font-family: inherit;
+  transition: border-color 0.15s;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #c98a4b;
+}
+
+/* File picker row */
+.fileRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fileName {
+  font-size: 0.85rem;
+  color: #9e8278;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+/* Background image preview */
+.bgPreview {
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e8ddd7;
+}
+
+.bgPreview img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Image grid */
+.noImages {
+  color: #9e8278;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.imageGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.thumb {
+  position: relative;
+  width: 120px;
+  height: 90px;
+  border-radius: 8px;
+  overflow: visible;
+  border: 1px solid #e8ddd7;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.deleteImg {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #261712;
+  color: #f3e9da;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  z-index: 1;
+}
+
+.deleteImg:hover {
+  background: #8b2f23;
+}
+
+/* Upload button */
+.uploadBtn {
+  background: var(--btn-bg);
+  border: none;
+  color: var(--btn-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  font-family: inherit;
+}
+
+.uploadBtn:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.uploadBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.hiddenFile {
+  display: none;
+}
+
+/* Footer actions */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.cancelBtn {
+  background: transparent;
+  border: 1px solid #cdb9a3;
+  color: #6b5148;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s;
+}
+
+.cancelBtn:hover {
+  border-color: #9e8278;
+  color: #261712;
+}
+
+.saveBtn {
+  background: var(--btn-bg);
+  border: none;
+  color: var(--btn-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.65rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+
+.saveBtn:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.saveBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

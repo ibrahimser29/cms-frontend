@@ -1,0 +1,57 @@
+.shell {
+  display: flex;
+  min-height: calc(100vh - 70px);
+  background: #faf6f0;
+}
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: #1c0f0b;
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebarLabel {
+  color: #cdb9a3;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem 0.25rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.navLink {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  color: #cdb9a3;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.navLink:hover {
+  background: rgba(243, 233, 218, 0.08);
+  color: #f3e9da;
+}
+
+.navLink.active {
+  background: rgba(201, 138, 75, 0.18);
+  color: #c98a4b;
+  font-weight: 600;
+}
+
+.content {
+  flex: 1;
+  padding: 2.5rem 3rem;
+  overflow-y: auto;
+}

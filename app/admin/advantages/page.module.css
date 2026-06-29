@@ -1,0 +1,72 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.listRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.index {
+  width: 1.5rem;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: #9e8278;
+  text-align: center;
+  font-weight: 600;
+}
+
+.listInput {
+  flex: 1;
+  margin-bottom: 0 !important;
+}
+
+.btnLabel {
+  width: 140px;
+  flex-shrink: 0;
+  margin-bottom: 0 !important;
+}
+
+.btnHref {
+  flex: 1;
+  margin-bottom: 0 !important;
+}
+
+.removeBtn {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #f5e0dc;
+  color: #8b2f23;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.removeBtn:hover {
+  background: #f0c5bf;
+}
+
+/* Single image */
+.singleImageWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.singleImage {
+  width: 100%;
+  max-width: 380px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  border: 1px solid #e8ddd7;
+}

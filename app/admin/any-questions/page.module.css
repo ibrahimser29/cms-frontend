@@ -1,0 +1,14 @@
+.singleImageWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.singleImage {
+  width: 100%;
+  max-width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  border: 1px solid #e8ddd7;
+}

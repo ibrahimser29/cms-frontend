@@ -1,0 +1,202 @@
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.addBtn {
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+
+.addBtn:hover { opacity: 0.88; }
+
+/* ── Add form ── */
+.addForm {
+  background: #fff;
+  border: 1px solid #e8ddd7;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.addFormTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #261712;
+  margin: 0 0 1.25rem;
+}
+
+.addGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.empty {
+  color: #9e8278;
+  margin-top: 1rem;
+}
+
+/* ── Table ── */
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e8ddd7;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.th {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9e8278;
+  background: #faf6f0;
+  border-bottom: 1px solid #e8ddd7;
+  white-space: nowrap;
+}
+
+.thAccent {
+  background: #c98a4b;
+  color: #1c0f0b;
+}
+
+.row {
+  border-bottom: 1px solid #f0e8e3;
+  transition: background 0.1s;
+}
+
+.row:last-child { border-bottom: none; }
+.row:hover { background: #fdf9f6; }
+
+.editRow {
+  background: #fff8f2;
+  border-bottom: 1px solid #e8ddd7;
+}
+
+.td {
+  padding: 0.65rem 1rem;
+  font-size: 0.88rem;
+  color: #261712;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.categoryTd {
+  font-weight: 600;
+  color: #c98a4b;
+}
+
+.tdAccent {
+  background: rgba(201, 138, 75, 0.12);
+  color: #7a4f1a;
+  font-weight: 700;
+}
+
+.computed {
+  color: #cdb9a3;
+}
+
+/* ── Inline edit inputs ── */
+.cellInput {
+  width: 100%;
+  max-width: 110px;
+  background: #fff;
+  border: 1px solid #cdb9a3;
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.85rem;
+  color: #261712;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.cellInput:focus { border-color: #c98a4b; }
+
+/* ── Row action buttons ── */
+.rowActions {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.editRowBtn {
+  background: #728BAD;
+  border: none;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+
+.editRowBtn:hover { opacity: 0.88; }
+
+.deleteRowBtn {
+  background: #fce9e7;
+  border: 1px solid #f5c6c1;
+  color: #8b2f23;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.deleteRowBtn:hover:not(:disabled) { background: #f5c6c1; }
+.deleteRowBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.saveRowBtn {
+  background: #728BAD;
+  border: none;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+
+.saveRowBtn:hover:not(:disabled) { opacity: 0.88; }
+.saveRowBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.cancelRowBtn {
+  background: transparent;
+  border: 1px solid #cdb9a3;
+  color: #9e8278;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s;
+}
+
+.cancelRowBtn:hover { border-color: #9e8278; color: #261712; }

@@ -1,0 +1,124 @@
+.page {
+  min-height: calc(100vh - 70px);
+  background: #0e0708;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 24px,
+    rgba(255, 255, 255, 0.015) 24px,
+    rgba(255, 255, 255, 0.015) 25px
+  );
+  padding: 5rem 2rem 6rem;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ── Heading ── */
+.heading {
+  color: #f3e9da;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0 0 3rem;
+  display: inline-block;
+  padding-bottom: 0.35em;
+  border-bottom: 3px solid #c98a4b;
+}
+
+.empty {
+  color: #9e8278;
+}
+
+/* ── Table wrapper (horizontal scroll on small screens) ── */
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 14px;
+  border: 1px solid rgba(201, 138, 75, 0.12);
+}
+
+/* ── Table ── */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+
+/* ── Header ── */
+.th {
+  padding: 0.8rem 1.25rem;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9e8278;
+  background: #160b08;
+  border-bottom: 1px solid rgba(201, 138, 75, 0.12);
+  white-space: nowrap;
+}
+
+.thAccent {
+  background: #c98a4b;
+  color: #1c0f0b;
+}
+
+/* ── Category sub-header row ── */
+.categoryRow {
+  background: rgba(201, 138, 75, 0.07);
+}
+
+.categoryCell {
+  padding: 0.55rem 1.25rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c98a4b;
+}
+
+/* ── Data rows ── */
+.row {
+  border-bottom: 1px solid rgba(243, 233, 218, 0.05);
+  transition: background 0.1s;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: rgba(243, 233, 218, 0.03);
+}
+
+.td {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  color: #f3e9da;
+  background: #14090a;
+  white-space: nowrap;
+}
+
+.tdAccent {
+  background: #c98a4b;
+  color: #1c0f0b;
+  font-weight: 700;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .page {
+    padding: 3rem 1rem 4rem;
+  }
+
+  .th,
+  .td {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.82rem;
+  }
+}
