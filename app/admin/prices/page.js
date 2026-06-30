@@ -5,7 +5,7 @@ import { fetchWithAuth } from '@/lib/api';
 import styles from './page.module.css';
 import cardStyles from '../hero/page.module.css';
 
-const API_BASE = 'http://127.0.0.1:3000';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 
 const EMPTY_FORM = { category: '', length: '', width: '', thickness: '', pricePerM3: '', sortOrder: '0' };
 
